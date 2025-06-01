@@ -1,0 +1,46 @@
+          /* Make the table responsive */
+.table-responsive {
+    overflow-x: auto;
+}
+
+@media (max-width: 767.98px) {
+    /* Apply to screens smaller than 768px (Bootstrap's md breakpoint) */
+    
+    .table thead {
+        display: none; /* Hide table header */
+    }
+    
+    .table, .table tbody, .table tr, .table td {
+        display: block; /* Make everything block-level */
+        width: 100%; /* Full width */
+    }
+    
+    .table tr {
+        margin-bottom: 1rem; /* Add space between rows */
+        border: 1px solid #dee2e6; /* Optional: Add a border around each row */
+        border-radius: 0.5rem; /* Optional: Add rounded corners */
+        padding: 1rem; /* Optional: Add padding for spacing */
+    }
+    
+    .table td {
+        display: flex; /* Flexbox layout */
+        justify-content: space-between; /* Space between label and content */
+        align-items: center; /* Vertically align items */
+        padding: 0.5rem 1rem; /* Padding inside each cell */
+        border: none; /* Remove default table cell borders */
+        border-bottom: 1px solid #dee2e6; /* Add border between items */
+    }
+
+    .table td:last-child {
+        border-bottom: none; /* Remove border from the last item */
+    }
+    
+    .table td::before {
+        content: attr(data-label); /* Use the data-label attribute for labels */
+        font-weight: bold; /* Make labels bold */
+        flex-basis: 50%; /* Set label width */
+        text-align: left; /* Align labels to the left */
+        padding-right: 1rem; /* Space between label and content */
+        color: #495057; /* Label text color */
+    }
+}
